@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%; /* Ensures the body and HTML cover full height */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column; /* Ensures vertical layout */
+    height: 100%; /* Full viewport height */
+}
+
+/* Header Styles */
+header {
+    background-color: #000;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    width: 100%;
+    height: 80px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+/* Logo Styles */
+.logo {
+    flex: 1;
+}
+
+.logo-img {
+    width: 100px;
+    height: 80px;
+}
+.menu {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around; /* Evenly spread menu items */
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    flex: 3;
+}
+
+.menu li {
+    position: relative;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 10px 15px;
+    display: block;
+}
+
+.menu a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+}
+
+/* Dropdown Menu Styles */
+.dropdown-menu {
+    display: none; /* Hidden by default */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #333;
+    min-width: 150px;
+    border-radius: 5px;
+    z-index: 1;
+    padding: 10px 0;
+}
+
+.dropdown-menu li {
+    padding: 10px;
+    text-align: left;
+}
+
+.dropdown-menu a {
+    padding: 10px 20px;
+    color: white;
+}
+
+.dropdown-menu a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Show dropdown on hover */
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+
+.middle-section {
+    background-color: #C31167; 
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start ;
+    align-items: flex-start;
+    flex-grow: 1; 
+    text-align: left;
+    padding: 20px;
+    padding-top: 70px;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.title {
+    font-size: 2rem;
+    color: black;
+    margin-bottom: 20px;
+    font-size: 500%;
+    font-weight: 900;
+}
+.text-box-stor {
+    background-color: black;
+    color: white;
+    padding: 40px;
+    font-size: 2rem;
+    border-radius: 15px; /* Rounded corners */
+    font-weight: 900;
+    margin-bottom: 100px;
+    align-self: center;
+    /* Adjust to make it a large box */
+}
+.highlight {
+    color: #C31167; /* Set the color to something of your choice */
+    font-weight: bold;
+}
+.content-container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 20px; /* Space between the black box and the image */
+}
+
+.image-container img {
+    align-self: flex-start; /* Ensure the image aligns to the top */
+    max-height: 300px; /* Limit the height if needed to avoid overflow */
+    width: auto;
+}
+
+/* Image Grid Section */
+.image-grid {
+    display: flex;
+    width: 100%;
+    height: 35vh; /* Takes up 35% of the viewport height */
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+
+.image-container2 {
+    width: 33.33%;
+    position: relative;
+    height: 100%;
+}
+
+.image-container2 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the container without distortion */
+}
+
+.text-box {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color:rgb(195, 17, 103, 0.5);
+    color: white;
+    padding: 10px;
+    font-size: 40px;
+    text-align: center;
+    border-radius: 5px;
+}
